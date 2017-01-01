@@ -21,6 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
 
+    url(r'^$', include('blog.urls')),
     url(r'^polls/', include('polls.urls')),
     url(r'^admin/', admin.site.urls),
 ]
