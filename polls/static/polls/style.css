@@ -1,0 +1,7 @@
+li{
+    list-style-type: none;
+    display: inline;
+}
+li a{
+    background-color: #888888;
+}
