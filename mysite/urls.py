@@ -19,9 +19,6 @@ from django.contrib import admin
 from django.conf import settings
 
 
-
-
-
 urlpatterns = [
 
     url(r'^polls/', include('polls.urls')),
