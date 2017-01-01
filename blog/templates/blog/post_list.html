@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load staticfiles %}
     <meta charset="UTF-8">
     <title>Post List</title>
+    <link href="{% static 'blog/css/style.css' %}" rel="stylesheet" type="text/css">
 </head>
-<body>
+<% en>
 {% include "polls/back.html" %}
 <h1>Boss' Blog</h1>
 <h2>Posts:</h2>
+{% for post in posts %}
+    <div class="post">
+        <p class="pub-date">Publication date - {{ post.published_date }}</p>
+        <h1>{{ post.title }}</h1>
+        <p class = "post-text">{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 </body>
 </html>

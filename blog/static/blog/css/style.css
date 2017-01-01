@@ -1,0 +1,19 @@
+h2{
+    text-align: center;
+}
+.post{
+    background-color: cadetblue;
+    padding: 2rem;
+    width: 80%;
+    margin-left:5rem;
+}
+
+.post h1{
+    margin: 0;
+}
+
+.post .post-text{
+    background-color: aliceblue;
+    font-size: x-large;
+    padding: 1rem;
+}
