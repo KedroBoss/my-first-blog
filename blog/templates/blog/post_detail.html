@@ -1,8 +1,8 @@
 {% extends 'lib/base.html' %}
-{#{% block links %}#}
-{#    {% load staticfiles %}#}
-{#    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}">#}
-{#{% endblock %}#}
+{% block links %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}">
+{% endblock %}
 {% block container %}
     <div class="post">
         {% if post.published_date %}
