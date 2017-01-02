@@ -1,6 +1,7 @@
 h2{
     text-align: center;
 }
+
 .post{
     border-radius: 32px;
     background-color: cadetblue;
@@ -14,9 +15,13 @@ h2{
 .post h1{
     margin: 0;
 }
+.post .pub-date{
+    margin-bottom: 0;
+}
 
 .post .post-text{
     background-color: aliceblue;
     font-size: x-large;
     padding: 1rem;
+    margin-top: 1rem;
 }
