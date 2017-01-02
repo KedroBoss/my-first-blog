@@ -1,0 +1,14 @@
+{% extends 'lib/base.html' %}
+{% block links %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}">
+{% endblock %}
+{% block container %}
+    <div class="post">
+        {% if post.published_date %}
+            <p class="pub-date">Publication date - {{ post.published_date }}</p>
+        {% endif %}
+        <h1><a href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+        <p class="post-text">{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}

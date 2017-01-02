@@ -1,13 +1,17 @@
 {% extends 'lib/base.html' %}
+{% block links %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}">
+{% endblock %}
 {% block container %}
-<h1>Boss' Blog</h1>
-<h2>Posts:</h2>
-{% for post in posts %}
-    <div class="post">
-        <p class="pub-date">Publication date - {{ post.published_date }}</p>
-        <h1>{{ post.title }}</h1>
-        <p class="post-text">{{ post.text|linebreaksbr }}</p>
-    </div>
-{% endfor %}
-{%  endblock %}
+    <h1 class="site-title">Boss' Blog</h1>
+    <h2>Posts:</h2>
+    {% for post in posts %}
+        <div class="post">
+            <p class="pub-date">Publication date - {{ post.published_date }}</p>
+            <h1><a href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p class="post-text">{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
 
