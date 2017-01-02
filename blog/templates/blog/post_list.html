@@ -4,16 +4,17 @@
     {% load staticfiles %}
     <meta charset="UTF-8">
     <title>Post List</title>
-    <link href="{% static 'blog/css/style.css' %}" rel="stylesheet" type="text/css">
+{#    <link href="{% static 'blog/css/style.css' %}" rel="stylesheet" type="text/css">#}
+    {% include "lib/scripts.html" %}
 </head>
-{% include "polls/back.html" %}
+{% include "lib/back.html" %}
 <h1>Boss' Blog</h1>
 <h2>Posts:</h2>
 {% for post in posts %}
     <div class="post">
         <p class="pub-date">Publication date - {{ post.published_date }}</p>
         <h1>{{ post.title }}</h1>
-        <p class = "post-text">{{ post.text|linebreaksbr }}</p>
+        <p class="post-text">{{ post.text|linebreaksbr }}</p>
     </div>
 {% endfor %}
 </body>
