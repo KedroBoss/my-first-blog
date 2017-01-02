@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'lib',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +56,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['lib/templates', 'blog/templates', 'polls/templates'],
+        'DIRS': ['templates', 'blog/templates', 'polls/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

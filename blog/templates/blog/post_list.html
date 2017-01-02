@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load staticfiles %}
-    <meta charset="UTF-8">
-    <title>Post List</title>
-{#    <link href="{% static 'blog/css/style.css' %}" rel="stylesheet" type="text/css">#}
-    {% include "lib/scripts.html" %}
-</head>
-{% include "lib/back.html" %}
+{% extends 'templates/base.html' %}
+{% block container %}
 <h1>Boss' Blog</h1>
 <h2>Posts:</h2>
 {% for post in posts %}
@@ -17,5 +9,5 @@
         <p class="post-text">{{ post.text|linebreaksbr }}</p>
     </div>
 {% endfor %}
-</body>
-</html>
+{%  endblock %}
+
