@@ -1,7 +1,4 @@
-li{
-    list-style-type: none;
-    display: inline;
-}
-li a{
-    background-color: black;
+
+.recent-publish{
+    background-color: transparent;
 }
